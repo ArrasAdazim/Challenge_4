@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Binar Rental Card | Mohammed Arras Adazim</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!-- <link rel="stylesheet" href="../public/css/style.css" /> -->
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Screen untuk laptop  */
+      @media only screen and (min-width: 768px) {
+      }
+
+      /* untuk mobile */
+      @media only screen and (max-width: 768px) {
+        /* body {
+    background-color: #5cb85f;
+  } */
+
+        .offcanvas {
+          max-width: 80%;
+        }
+
+        /* .why-body {
+    text-align: center;
+  } */
+
+        .footer img {
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+
+        .faq-tittle,
+        .faq-body {
+          text-align: center;
+        }
+
+        .footer-body {
+          padding-bottom: 10px;
+        }
+      }
+
+      /* .footer img {
+    padding-bottom: 5px;
+} */
+
+      .nav-tem a {
+        font-size: 18px;
+      }
+      nav {
+        background-color: #f1f3ff !important;
+      }
+
+      .button-register {
+        background-color: #5cb85f;
+      }
+
+      .hero {
+        background-color: #f1f3ff !important;
+      }
+
+      .hero-tittle {
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      .hero p {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="background-color: #f1f3ff"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="https://i.ibb.co/SXNp1pn/logo.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+              BCR
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item me-3 text-black fw-medium">
+                <a class="nav-link" aria-current="page" href="#">Our Service</a>
+              </li>
+              <li class="nav-item me-3 text-black fw-medium">
+                <a class="nav-link" href="#">Why Us</a>
+              </li>
+              <li class="nav-item me-3 text-black fw-medium">
+                <a class="nav-link" href="#">Testimonial</a>
+              </li>
+              <li class="nav-item me-3 text-black fw-medium">
+                <a class="nav-link" href="#">FAQ</a>
+              </li>
+              <li class="nav-item me-3 text-black fw-medium">
+                <button
+                  type="button"
+                  class="btn register text-white fw-bold rounded-1"
+                  style="background-color: #5cb85f"
+                >
+                  Register
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Hero Section -->
+
+    <div class="hero mt-5" style="background-color: #f1f3ff">
+      <div class="container d-flex pt-3">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-md-6">
+            <div>
+              <h1 class="hero-tittle text-start">
+                Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)
+              </h1>
+              <p class="pt-2 pb-2">
+                Selamat datang di Binar Car Rental. Kami menyediakan mobil
+                kualitas terbaik dengan harga terjangkau. Selalu siap melayani
+                kebutuhanmu untuk sewa mobil selama 24 jam.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="https://i.ibb.co/Tr2ZG7t/img-car.png" class="w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <div class="search">
+      <div
+        class="container"
+        style="width: 80%; position: relative; top: -50px; z-index: 1"
+      >
+        <div class="card shadow">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md">
+                <label for="driverType" class="form-label col-form-label-sm"
+                  >Tipe Driver</label
+                >
+                <select
+                  class="form-select form-select-sm"
+                  id="driver"
+                  aria-label="Default select example"
+                  required
+                >
+                  <option selected>Pilih Tipe Driver</option>
+                  <option value="true">Dengan Sopir</option>
+                  <option value="false">Tanpa Supir (Lepas Kunci)</option>
+                </select>
+              </div>
+              <div class="col-md">
+                <label for="tanggal" class="form-label col-form-label-sm"
+                  >Tanggal</label
+                >
+                <input
+                  type="date"
+                  class="form-control form-control-sm"
+                  id="date"
+                  required
+                />
+              </div>
+              <div class="col-md">
+                <label for="waktuJemput" class="form-label col-form-label-sm"
+                  >Waktu Jemput</label
+                >
+                <select
+                  class="form-select form-select-sm icon-rtl"
+                  id="time"
+                  aria-label="Default select example"
+                  required
+                >
+                  <option disabled selected>Pilih Waktu</option>
+                  <option value="07:00:00">07.00 WIB</option>
+                  <option value="08:00:00">08.00 WIB</option>
+                  <option value="09:00:00">09.00 WIB</option>
+                  <option value="10:00:00">10.00 WIB</option>
+                  <option value="11:00:00">11.00 WIB</option>
+                  <option value="12:00:00">12.00 WIB</option>
+                  <option value="13:00:00">13.00 WIB</option>
+                  <option value="14:00:00">14.00 WIB</option>
+                  <option value="15:00:00">15.00 WIB</option>
+                  <option value="16:00:00">16.00 WIB</option>
+                  <option value="17:00:00">17.00 WIB</option>
+                </select>
+              </div>
+              <div class="col-md">
+                <label for="jmlhPenumpang" class="form-label col-form-label-sm"
+                  >Jumlah Penumpang (Optional)</label
+                >
+                <input
+                  type="number"
+                  class="form-control form-control-sm"
+                  id="penumpang"
+                  placeholder="Jumlah Penumpang"
+                />
+              </div>
+              <div class="text-white" style="width: 100px; margin-top: 35px">
+                <button
+                  class="btn btn-sm button"
+                  type="submit"
+                  id="load-btn"
+                  style="
+                    background-color: #5cb85f;
+                    color: white;
+                    height: 38px;
+                    width: 75px;
+                  "
+                >
+                  Cari
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- list mobil -->
+    <div class="row row-cols-auto justify-content-center" id="carsList"></div>
+
+    <!-- Footer -->
+    <div class="footer" style="padding-top: 150px">
+      <div class="container text-start">
+        <div class="row">
+          <div class="col-md-4">
+            <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+            <p>binarcarrental@gmail.com</p>
+            <p>081-233-334-808</p>
+          </div>
+          <div class="col-md-2">
+            <p>
+              <a href="#Our-services" class="text-decoration-none text-black"
+                >Our services</a
+              >
+            </p>
+            <p>
+              <a href="#Why-us" class="text-decoration-none text-black"
+                >Why Us</a
+              >
+            </p>
+            <p>
+              <a href="#Testimonial" class="text-decoration-none text-black"
+                >Testimonial</a
+              >
+            </p>
+            <p>
+              <a href="#FAQ" class="text-decoration-none text-black">FAQ</a>
+            </p>
+          </div>
+          <div class="footer-body col-md-3">
+            <p>Connect with us</p>
+            <img
+              src="https://i.ibb.co/GCPkDMg/icon-facebook.png"
+              alt=""
+              class="me-2"
+            />
+            <img
+              src="https://i.ibb.co/pJDVndP/icon-instagram.png"
+              alt=""
+              class="me-2"
+            />
+            <img
+              src="https://i.ibb.co/PMT983Q/icon-twitter.png"
+              alt=""
+              class="me-2"
+            />
+            <img
+              src="https://i.ibb.co/7b4bH71/icon-mail.png"
+              alt=""
+              class="me-2"
+            />
+            <img
+              src="https://i.ibb.co/Jtdcnvx/icon-twitch.png"
+              alt=""
+              class="me-2"
+            />
+          </div>
+          <div class="footer-body col-md-3">
+            <p>Copyright Binar 2022</p>
+            <img src="https://i.ibb.co/SXNp1pn/logo.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+    <!-- Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/car.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
+
+    <!-- <script type="text/javascript" src="/public/scripts/app.js"></script>
+    <script type="text/javascript" src="/public/scripts/app.js"></script>
+    <script type="text/javascript" src="/public/scripts/car.js"></script>
+    <script type="text/javascript" src="/public/scripts/main.js"></script> -->
+  </body>
+</html>
